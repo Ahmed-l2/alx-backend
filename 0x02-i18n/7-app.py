@@ -61,6 +61,7 @@ def get_user():
 def before_request():
     """Set user information as global before each request"""
     g.user = get_user()
+    g.timezone = get_timezone()
 
 
 @app.route('/')

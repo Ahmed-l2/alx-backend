@@ -29,3 +29,6 @@ msgstr "Vous êtes connecté en tant que %(username)s."
 
 msgid "not_logged_in"
 msgstr "Vous n'êtes pas connecté."
+
+msgid "timezone"
+msgstr "Fuseau horaire actuel: %(timezone)s"
