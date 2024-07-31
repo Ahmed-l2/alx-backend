@@ -38,6 +38,19 @@ def get_locale():
     return request.accept_languages.best_match(app.config['LANGUAGES'])
 
 
+@babel.timezoneselector
+def get_timezone():
+    """Determine the timezone"""
+    timezone = request.args.get('timezone')
+    if timezone in pytz.all_timezones:
+        return timezone
+
+    if g.user and g.user['timezone'] in pytz.all_timezones:
+        return g.user['timezone']
+
+    return app.config['BABEL_DEFAULT_TIMEZONE']
+
+
 def get_user():
     """Returns user information from the mock database"""
     user_id = request.args.get('login_as', type=int)
@@ -53,7 +66,7 @@ def before_request():
 @app.route('/')
 def hello():
     """Route to index"""
-    return render_template('6-index.html')
+    return render_template('7-index.html')
 
 
 if __name__ == '__main__':
