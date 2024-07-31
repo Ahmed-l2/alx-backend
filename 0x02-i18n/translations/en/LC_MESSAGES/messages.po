@@ -32,3 +32,6 @@ msgstr "You are not logged in."
 
 msgid "timezone"
 msgstr "Current Timezone: %(timezone)s"
+
+msgid "current_time_is"
+msgstr "The current time is %(current_time)s."

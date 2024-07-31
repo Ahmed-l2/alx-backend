@@ -32,3 +32,6 @@ msgstr "Vous n'êtes pas connecté."
 
 msgid "timezone"
 msgstr "Fuseau horaire actuel: %(timezone)s"
+
+msgid "current_time_is"
+msgstr "Nous sommes le %(current_time)s."
